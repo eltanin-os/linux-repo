@@ -1,16 +1,18 @@
 diff -Naur a/Makefile b/Makefile
---- a/Makefile	2019-10-07 11:55:39.000000000 -0300
-+++ b/Makefile	2019-11-02 04:11:06.019531117 -0300
-@@ -41,8 +41,6 @@
+--- a/Makefile	Mon Oct  7 11:55:39 2019
++++ b/Makefile	Sun Sep 27 09:34:27 2020
+@@ -39,10 +39,7 @@
+ BIN = \
+ 	blkdiscard        \
  	chvt              \
- 	clear             \
+-	clear             \
  	ctrlaltdel        \
 -	dd                \
 -	df                \
  	dmesg             \
  	eject             \
  	fallocate         \
-@@ -52,7 +50,6 @@
+@@ -52,7 +49,6 @@
  	getty             \
  	halt              \
  	hwclock           \
@@ -18,7 +20,7 @@ diff -Naur a/Makefile b/Makefile
  	insmod            \
  	killall5          \
  	last              \
-@@ -60,8 +57,6 @@
+@@ -60,8 +56,6 @@
  	login             \
  	lsmod             \
  	lsusb             \
@@ -27,7 +29,7 @@ diff -Naur a/Makefile b/Makefile
  	mkswap            \
  	mount             \
  	mountpoint        \
-@@ -70,7 +65,6 @@
+@@ -70,7 +64,6 @@
  	passwd            \
  	pidof             \
  	pivot_root        \
@@ -35,7 +37,7 @@ diff -Naur a/Makefile b/Makefile
  	pwdx              \
  	readahead         \
  	respawn           \
-@@ -87,27 +81,20 @@
+@@ -87,27 +80,19 @@
  	unshare           \
  	uptime            \
  	vtallow           \
@@ -45,7 +47,7 @@ diff -Naur a/Makefile b/Makefile
  
  MAN1 = \
  	chvt.1              \
- 	clear.1             \
+-	clear.1             \
 -	dd.1                \
 -	df.1                \
  	dmesg.1             \
@@ -64,7 +66,7 @@ diff -Naur a/Makefile b/Makefile
  	pwdx.1              \
  	respawn.1           \
  	stat.1              \
-@@ -116,8 +103,7 @@
+@@ -116,8 +101,7 @@
  	unshare.1           \
  	uptime.1            \
  	vtallow.1           \
