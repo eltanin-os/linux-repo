@@ -1,3 +1,4 @@
 #!/bin/rc
-portmk make
-portmk make install
+# remove --enable-static check (should work if LDFLAGS are not ignored)
+mkutils sed configure 's/.*is not supported by kmod.*/true/g'
+portmk autohell install

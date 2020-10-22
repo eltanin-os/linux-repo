@@ -1,15 +1,11 @@
 name:kmod
-version:26
+version:27
 license:GPL-2
 description:Linux kernel module handling
-cksum:78c2b290ec09eb78b93c74f597420110199a723fa301e7af49a616885202431b736a41ad76dab00bac9d5708c1465c2d150125243eaad75f485686596d7ff4e7
-patches{
-	kmod-compat_build.patch
-}
+cksum:7b542c208207b71a8141073e46c0474a9d1882b6d80400dbb5994ccac2a4f9bd8a573f57f9d60667bbe825350dfbdd0f80f0b030a04038433ca4831ca7402385
 mirrors{
 	http://mirrors.edge.kernel.org/pub/linux/utils/kernel/kmod/kmod-$version.tar.xz
 }
 mdeps{
 	libc
-	libz
 }
