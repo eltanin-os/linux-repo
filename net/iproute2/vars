@@ -1,11 +1,11 @@
 name:iproute2
-version:4.19.0
+version:5.2.0
 license:GPL-2
 description:A set of utilities for Linux networking.
-cksum:c863bb88bf0c4667db03834b72041dc5eb95e9025487771d595b5e59be4c7d99169efbd2666d7565f47cc3029ea5eea3adee12b1ea7383f3346c6f75746fcd64
+cksum:a38bf367fed76989c5c4638767d8ad816ffb8fe4c6a772208e24207cd546655ad0e3e9f272453db28d833a70cf84f8a1a2429f2f385f380853cfc750b4d780d7
 patches{
 	iproute2-fix_includes_for_musl_libc.patch
-	iproute2-new_reduced_makefile.patch
+	iproute2-yacc_files.patch
 }
 mirrors{
 	http://mirrors.edge.kernel.org/pub/linux/utils/net/iproute2/iproute2-$version.tar.xz

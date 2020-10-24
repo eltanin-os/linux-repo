@@ -1,2 +1,5 @@
 #!/bin/rc
-portmk make install
+mkutils sed Makefile '/ARPD/d'
+mkutils sed tc/Makefile 's/.m_ipt.o//'
+rm man/man8/arpd.8
+portmk -e PKG_CONFIG'='false make install
