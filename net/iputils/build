@@ -1,0 +1,6 @@
+#!/bin/rc
+portmk \
+    -m -DNO_SETCAP_OR_SUID'='true \
+    -m -DUSE_IDN'='false \
+    -m -DUSE_GETTEXT'='false \
+    meson install
