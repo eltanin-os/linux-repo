@@ -1,0 +1,2 @@
+#!/bin/rc
+portmk -f nocppflags -m lib'='lib -m PAM_CAP'='no make install
