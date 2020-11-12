@@ -1,0 +1,56 @@
+diff -Naur a/Makefile b/Makefile
+--- a/Makefile	Mon Jul  8 15:09:59 2019
++++ b/Makefile	Wed Nov 11 18:59:23 2020
+@@ -1,6 +1,36 @@
+ # SPDX-License-Identifier: GPL-2.0
+ # Top level Makefile for iproute2
+ 
++ETC_IPROUTE2=\
++	etc/iproute2/group \
++	etc/iproute2/ematch_map \
++	etc/iproute2/nl_protos \
++	etc/iproute2/rt_dsfield \
++	etc/iproute2/rt_scopes \
++	etc/iproute2/rt_protos \
++	etc/iproute2/rt_tables \
++	etc/iproute2/bpf_pinning \
++	etc/iproute2/rt_realms
++
++EXAMPLES_DIFFSERV=\
++	examples/diffserv/efcbq \
++	examples/diffserv/Edge1 \
++	examples/diffserv/Edge31-ca-u32 \
++	examples/diffserv/ef-prio \
++	examples/diffserv/Edge32-cb-u32 \
++	examples/diffserv/Edge32-cb-chains \
++	examples/diffserv/Edge2 \
++	examples/diffserv/regression-testing \
++	examples/diffserv/afcbq \
++	examples/diffserv/Edge32-ca-u32 \
++	examples/diffserv/README
++
++EXAMPLES=\
++	examples/cbqinit.eth1 \
++	examples/gaiconf \
++	examples/README.cbq \
++	examples/SYN-DoS.rate.limit
++
+ ifeq ("$(origin V)", "command line")
+ VERBOSE = $(V)
+ endif
+@@ -88,12 +118,10 @@
+ 	install -m 0755 -d $(DESTDIR)$(HDRDIR)
+ 	install -m 0755 -d $(DESTDIR)$(DOCDIR)/examples
+ 	install -m 0755 -d $(DESTDIR)$(DOCDIR)/examples/diffserv
+-	install -m 0644 README.iproute2+tc $(shell find examples -maxdepth 1 -type f) \
+-		$(DESTDIR)$(DOCDIR)/examples
+-	install -m 0644 $(shell find examples/diffserv -maxdepth 1 -type f) \
+-		$(DESTDIR)$(DOCDIR)/examples/diffserv
++	install -m 0644 README.iproute2+tc $(EXAMPLES) $(DESTDIR)$(DOCDIR)/examples
++	install -m 0644 $(EXAMPLES_DIFFSERV) $(DESTDIR)$(DOCDIR)/examples/diffserv
+ 	@for i in $(SUBDIRS);  do $(MAKE) -C $$i install; done
+-	install -m 0644 $(shell find etc/iproute2 -maxdepth 1 -type f) $(DESTDIR)$(CONFDIR)
++	install -m 0644 $(ETC_IPROUTE2) $(DESTDIR)$(CONFDIR)
+ 	install -m 0755 -d $(DESTDIR)$(BASH_COMPDIR)
+ 	install -m 0644 bash-completion/tc $(DESTDIR)$(BASH_COMPDIR)
+ 	install -m 0644 include/bpf_elf.h $(DESTDIR)$(HDRDIR)
