@@ -2,3 +2,4 @@
 # remove --enable-static check (should work if LDFLAGS are not ignored)
 mkutils sed configure 's/.*is not supported by kmod.*/true/g'
 portmk autohell install
+mkutils install bin -l kmod lsmod rmmod insmod modinfo modprobe depmod
