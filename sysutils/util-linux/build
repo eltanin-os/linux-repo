@@ -1,0 +1,7 @@
+#!/bin/rc
+portmk \
+    -m --disable-makeinstall-chown \
+    -m --disable-use-tty-group \
+    -m --without-systemd \
+    -m --without-python \
+    autohell install
