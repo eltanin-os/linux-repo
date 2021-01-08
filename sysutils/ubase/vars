@@ -5,7 +5,6 @@ description:A collection of unportable tools.
 cksum:e768e8db3faf1f88ebe6eea9a1e9e28ba5221712136e4be352fb410f26248386bd5d73878f34b2a073010e92a17b55359b795e0beeb0bd812c5d4a18a8ef58a3
 patches{
 	ubase-add_missing_header.patch
-	ubase-remove_duplicated.patch
 }
 mirrors{
 	http://downloads.eltan.in.net/mirrors/ubase-$version.tar.lz
