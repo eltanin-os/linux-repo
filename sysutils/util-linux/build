@@ -1,7 +1,21 @@
 #!/bin/rc
 portmk \
+    -m --disable-eject \
+    -m --disable-fallocate \
+    -m --disable-hwclock \
+    -m --disable-last \
+    -m --disable-mesg \
+    -m --disable-mount \
+    -m --disable-mountpoint \
+    -m --disable-nologin \
+    -m --disable-pivot_root \
+    -m --disable-switch_root \
+    -m --disable-unshare \
     -m --disable-makeinstall-chown \
     -m --disable-use-tty-group \
     -m --without-systemd \
     -m --without-python \
     autohell install
+
+mkutils install bin -d blkdiscard ctrlaltdel dmesg fsfreeze \
+    mkswap swaplabel swapoff swapon
