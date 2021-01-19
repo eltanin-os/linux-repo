@@ -1,0 +1,4 @@
+#!/bin/rc
+enable_option_checking=no
+portmk -m --disable-nls -m --disable-libuuid -m --disable-libblkid autohell all
+portmk autohell install
