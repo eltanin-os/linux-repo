@@ -1,0 +1,11 @@
+diff -Naur a/extlinux/main.c b/extlinux/main.c
+--- a/extlinux/main.c	2014-10-06 13:27:44.000000000 -0300
++++ b/extlinux/main.c	2021-01-18 00:56:53.437726772 -0300
+@@ -41,6 +41,7 @@
+ #include <sys/types.h>
+ #include <sys/mount.h>
+ #include <sys/vfs.h>
++#include <sys/sysmacros.h>
+ 
+ #include "linuxioctl.h"
+ 

@@ -1,0 +1,15 @@
+name:syslinux
+version:6.03
+license:GPL
+description:Boot loader for the Linux operating system.
+cksum:814ea7078fb414742e2c4810808f31f9946bd691f4d3ae53d22c3ad05cf94c4f39016c2ccb4d54e93537588c3e01ba8ad0140077e89957a6ffdef1c634759915
+patches{
+	syslinux-add_missing_headers.patch
+}
+mirrors{
+	https://mirrors.edge.kernel.org/pub/linux/utils/boot/syslinux/syslinux-$version.tar.xz
+}
+mdeps{
+	libc
+	util-linux
+}

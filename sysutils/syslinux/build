@@ -1,0 +1,28 @@
+#!/bin/rc
+mkutils sed Makefile \
+    -e '/DIAGDIR/d' \
+    -e 's;diag libinstaller dos win32 win64 dosutil txt;libinstaller txt;g' \
+    -e 's;win32/syslinux.exe win64/syslinux64.exe;;g' \
+    -e 's;dosutil/\*.com dosutil/\*.sys;;g' \
+    -e 's;dos/syslinux.com;;g' \
+    -e 's;INSTALLSUBDIRS = com32 utils dosutil;INSTALLSUBDIRS = com32 utils;g' \
+    -e 's;com32/modules/\*.c32;;' \
+    -e 's;com32/hdt/\*.c32;;' \
+    -e 's;com32/rosh/\*.c32;;' \
+    -e 's;com32/gfxboot/\*.c32;;' \
+    -e 's;com32/sysdump/\*.c32;;' \
+    -e 's;com32/lua/src/\*.c32;;' \
+    -e 's;com32/gpllib/\*.c32;;' \
+    -e 's;com32/cmenu/libmenu/\*.c32;;'
+mkutils sed mk/syslinux.mk 's;/usr/man;/usr/share/man;g'
+CC=($CC $CFLAGS $CPPFLAGS $LDFLAGS)
+portmk make CC'='$"CC AUXDIR'='/usr/lib/syslinux INSTALLROOT'='$"DESTDIR bios install
+switch ($PORTSYS_HOSTARCH) {
+case 'x86_64'
+	target=efi64
+case 'i686'
+	target=efi32
+}
+portmk make CC'='$"CC AUXDIR'='/usr/lib/syslinux INSTALLROOT'='$"DESTDIR $target install
+rm -Rf $DESTDIR/usr/lib/syslinux/com32/include
+rm $DESTDIR/usr/lib/syslinux/com32/*.a
