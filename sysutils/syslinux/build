@@ -15,7 +15,7 @@ mkutils sed Makefile \
     -e 's;com32/gpllib/\*.c32;;' \
     -e 's;com32/cmenu/libmenu/\*.c32;;'
 mkutils sed mk/syslinux.mk 's;/usr/man;/usr/share/man;g'
-CC=($CC $CFLAGS $CPPFLAGS $LDFLAGS)
+CC=$"CC' '$"CFLAGS' '$"CPPFLAGS' '$"LDFLAGS
 portmk make CC'='$"CC AUXDIR'='/usr/lib/syslinux INSTALLROOT'='$"DESTDIR bios install
 switch ($PORTSYS_HOSTARCH) {
 case 'x86_64'
