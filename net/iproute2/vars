@@ -1,9 +1,10 @@
 name:iproute2
-version:5.2.0
+version:5.14.0
 license:GPL-2
 description:A set of utilities for Linux networking.
-cksum:a38bf367fed76989c5c4638767d8ad816ffb8fe4c6a772208e24207cd546655ad0e3e9f272453db28d833a70cf84f8a1a2429f2f385f380853cfc750b4d780d7
+cksum:f7818808bf30ed9fd9a56755811048805072f00297c97d4d2361e7138c1e3453652929fc96082d1a82249d956a0134e4c25d9ea4d57651d639374be0fff880a0
 patches{
+	iproute2-fix_static.patch
 	iproute2-posix_compat.patch
 }
 mirrors{
