@@ -1,11 +1,12 @@
 name:kmod
-version:27
+version:29
 license:GPL-2
 description:Linux kernel module handling
-cksum:7b542c208207b71a8141073e46c0474a9d1882b6d80400dbb5994ccac2a4f9bd8a573f57f9d60667bbe825350dfbdd0f80f0b030a04038433ca4831ca7402385
+cksum:7a8a28e8fba791ffd257fdacaee4452205144746c721a89f17094645d424a2cdcdde5a977c71d6c4f48f1db05182e4e02c50b969ab70b6b8901569ba05bf9a03
 mirrors{
 	http://mirrors.edge.kernel.org/pub/linux/utils/kernel/kmod/kmod-$version.tar.xz
 }
 mdeps{
 	libc
+	libz
 }
