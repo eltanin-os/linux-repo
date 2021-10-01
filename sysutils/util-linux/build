@@ -1,4 +1,8 @@
 #!/bin/rc
+mkutils sed configure \
+    -e 's;${exec_prefix}/bin;${exec_prefix}'$"BINDIR';g' \
+    -e 's;${exec_prefix}/sbin;${exec_prefix}'$"BINDIR';g'
+
 portmk \
     -m --disable-eject \
     -m --disable-fallocate \

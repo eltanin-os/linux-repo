@@ -1,13 +1,13 @@
 name:util-linux
-version:2.36
+version:2.37.2
 license:GPL-3+ GPL-2+ GPL-2
 description:Miscellaneous linux utilities.
-cksum:252d1b4beea498088a4528176b8541358a3ee185656eeb5ec2adaea09a0b5e90733083bc2c370298669d540dd568026a58edb17f646eb97da77fa977ab9ccc56
+cksum:61fed9c613cabafc219ac9c257f1c48cb79996c58922c5f99bb20598e000b27b1198c77da3ed5db0bd22daa607f70e3be4358a4849c82fcc6b684806f34a3b41
 patches{
 	util-linux-tparm.patch
 }
 mirrors{
-	https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v$version/util-linux-$version.tar.xz
+	https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.37/util-linux-$version.tar.xz
 }
 mdeps{
 	ncurses
