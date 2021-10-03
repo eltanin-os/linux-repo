@@ -1,0 +1,15 @@
+name:limine-bin
+version:2.58.1
+license:BSD-2
+description:x86/x86_64 BIOS/UEFI Bootloader.
+cksum:08925b16d30f6ab51fcb0b4e5e940454c4ff8b8df9efdf05dba074831f8e27f91333df832c9397ea0705bf1e857a88da18d47c7ab69f7a73340d9a7880398e79
+src:limine-$version-binary
+patches{
+	limine-bin-path.patch
+}
+mirrors{
+	http://downloads.eltan.in.net/mirrors/limine-$version-binary.tar.lz
+}
+mdeps{
+	libc
+}
