@@ -1,10 +1,10 @@
 name:ccore
-version:0.14.1
+version:0.1.0
 license:UNLICENSE
 description:Eltanin complementary core.
-cksum:6152fff9f703ec9fd2dd8f25dc1289a7afa6d7c663285d45cbd1aa6c381de64b547755336df34b83cb122d203dbdba2d61a2295085f9338e470242a444b67f5f
+cksum:9db22f8aba4b1604391f025474054232759cb39dc1f7d2d6c61cda2db3b2fb23e29eaaad2607305ae53a4f463442025696c36facbdee5f335bc4124bd59f482d
 mirrors{
-	http://downloads.eltan.in.net/files/ccore/ccore-$version.tar.lz
+	https://downloads.eltaninos.org/repo/sources/ccore-$version.tar.lz
 }
 mdeps{
 	ncurses

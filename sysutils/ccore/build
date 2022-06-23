@@ -1,2 +1,3 @@
 #!/bin/rc
-portmk -f replace make install
+true > config.rc
+portmk -f envtolist redo install
