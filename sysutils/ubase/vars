@@ -1,13 +1,13 @@
 name:ubase
-version:git-3c88778
+version:20190312
 license:MIT
 description:A collection of unportable tools.
-cksum:9142ae68517b69c3e11fbb237ad8e2f398d3e4064e309317df98cb46718c45ff0483543197349e2a3bee49aeed4965441c3a972bc4f22e96169207aa9dec7461
+cksum:f2eace45833fd923e05e0ceea697418bf2cb37c806eeedad5d85089d4c72e75d3ce1b6fceb4910397a1f8d1451fb85d42488ecd8229157d09b78d3e31262ad19
 patches{
 	ubase-add_missing_header.patch
 }
 mirrors{
-	http://downloads.eltan.in.net/mirrors/ubase-$version.tar.lz
+	https://downloads.eltaninos.org/repo/sources/ubase-$version.tar.lz
 }
 mdeps{
 	libc
