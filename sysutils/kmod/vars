@@ -9,4 +9,5 @@ mirrors{
 mdeps{
 	libc
 	libz
+	xz
 }
